@@ -1,0 +1,48 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+**/bin/
+**/obj/
+*.exe
+*.dll
+*.pdb
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+project.assets.json
+project.nuget.cache
+*.nuget.dgspec.json
+
+# JetBrains
+_ReSharper*/
+*.DotSettings.user
+
+# VS Code
+.vscode/
+
+# OS generated
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.DS_Store
+
+# OneDrive/temp
+*.tmp
+
+# Logs
+*.log
+
+# Ignore build folders inside project with spaces
+"blood donation/bin/"
+"blood donation/obj/"
