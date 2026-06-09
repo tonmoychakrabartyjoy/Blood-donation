@@ -157,7 +157,7 @@
             label4.TabIndex = 12;
             label4.Text = "Someone is waiting for your kindness.";
             // 
-            // Form3
+            // HomePage
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -176,8 +176,9 @@
             Controls.Add(pictureBox3);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form3";
+            Name = "HomePage";
             Text = "Home page";
+            Load += HomePage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
