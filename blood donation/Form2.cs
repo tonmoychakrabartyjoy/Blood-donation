@@ -18,7 +18,7 @@ namespace blood_donation
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Form1 aa = new Form1();
+            Login aa = new Login();
 
             aa.Show();
             this.Close();
@@ -26,7 +26,7 @@ namespace blood_donation
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form1 obj = new Form1();
+            Login obj = new Login();
             obj.Show();
             this.Close();
         }
