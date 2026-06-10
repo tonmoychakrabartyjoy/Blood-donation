@@ -35,6 +35,7 @@
             soName = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel5 = new Panel();
+            btnBack = new Button();
             btnRefresh = new Button();
             btnDelete = new Button();
             btnSearch = new Button();
@@ -68,7 +69,7 @@
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
             txtAddress = new TextBox();
-            lblAddress = new Label();
+            lblDistrict = new Label();
             rbFemale = new RadioButton();
             rbMale = new RadioButton();
             lblGender = new Label();
@@ -79,8 +80,10 @@
             lblNumber = new Label();
             lblName = new Label();
             panel2 = new Panel();
-            btnDonor = new Button();
             btnSearchDonor = new Button();
+            btnDonor = new Button();
+            textBox1 = new TextBox();
+            lblUpozilla = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -168,6 +171,7 @@
             // panel5
             // 
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(btnBack);
             panel5.Controls.Add(btnRefresh);
             panel5.Controls.Add(btnDelete);
             panel5.Controls.Add(btnSearch);
@@ -179,10 +183,20 @@
             panel5.Size = new Size(1918, 119);
             panel5.TabIndex = 3;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(1258, 54);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(94, 29);
+            btnBack.TabIndex = 33;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // btnRefresh
             // 
             btnRefresh.Cursor = Cursors.Hand;
-            btnRefresh.Location = new Point(1104, 52);
+            btnRefresh.Location = new Point(966, 54);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(94, 29);
             btnRefresh.TabIndex = 32;
@@ -192,7 +206,7 @@
             // btnDelete
             // 
             btnDelete.Cursor = Cursors.Hand;
-            btnDelete.Location = new Point(1257, 52);
+            btnDelete.Location = new Point(1119, 54);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 31;
@@ -202,7 +216,7 @@
             // btnSearch
             // 
             btnSearch.Cursor = Cursors.Hand;
-            btnSearch.Location = new Point(800, 52);
+            btnSearch.Location = new Point(662, 54);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 30;
@@ -212,7 +226,7 @@
             // btnUpdate
             // 
             btnUpdate.Cursor = Cursors.Hand;
-            btnUpdate.Location = new Point(955, 52);
+            btnUpdate.Location = new Point(817, 54);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 29);
             btnUpdate.TabIndex = 29;
@@ -222,7 +236,7 @@
             // btnAdd
             // 
             btnAdd.Cursor = Cursors.Hand;
-            btnAdd.Location = new Point(656, 52);
+            btnAdd.Location = new Point(518, 54);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 28;
@@ -233,8 +247,8 @@
             // 
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 250F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.8421059F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.1578941F));
             tableLayoutPanel3.Controls.Add(panel4, 2, 0);
             tableLayoutPanel3.Controls.Add(panel3, 1, 0);
             tableLayoutPanel3.Controls.Add(panel2, 0, 0);
@@ -243,7 +257,6 @@
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Size = new Size(1924, 805);
             tableLayoutPanel3.TabIndex = 2;
             // 
@@ -252,9 +265,9 @@
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(dataGridView1);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(922, 3);
+            panel4.Location = new Point(869, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(999, 799);
+            panel4.Size = new Size(1052, 799);
             panel4.TabIndex = 3;
             // 
             // dataGridView1
@@ -267,13 +280,15 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(997, 797);
+            dataGridView1.Size = new Size(1050, 797);
             dataGridView1.TabIndex = 0;
             // 
             // panel3
             // 
             panel3.BackColor = SystemColors.Control;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(lblUpozilla);
             panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(label1);
             panel3.Controls.Add(btnANo);
@@ -290,7 +305,7 @@
             panel3.Controls.Add(lblDoYou);
             panel3.Controls.Add(gpDiseas);
             panel3.Controls.Add(txtAddress);
-            panel3.Controls.Add(lblAddress);
+            panel3.Controls.Add(lblDistrict);
             panel3.Controls.Add(rbFemale);
             panel3.Controls.Add(rbMale);
             panel3.Controls.Add(lblGender);
@@ -303,12 +318,12 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(253, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(663, 799);
+            panel3.Size = new Size(610, 799);
             panel3.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(171, 563);
+            dateTimePicker1.Location = new Point(171, 600);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(267, 27);
             dateTimePicker1.TabIndex = 66;
@@ -317,7 +332,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(117, 568);
+            label1.Location = new Point(117, 605);
             label1.Name = "label1";
             label1.Size = new Size(48, 20);
             label1.TabIndex = 65;
@@ -325,7 +340,7 @@
             // 
             // btnANo
             // 
-            btnANo.Location = new Point(386, 512);
+            btnANo.Location = new Point(386, 549);
             btnANo.Name = "btnANo";
             btnANo.Size = new Size(94, 29);
             btnANo.TabIndex = 64;
@@ -334,7 +349,7 @@
             // 
             // btnAYes
             // 
-            btnAYes.Location = new Point(275, 512);
+            btnAYes.Location = new Point(275, 549);
             btnAYes.Name = "btnAYes";
             btnAYes.Size = new Size(94, 29);
             btnAYes.TabIndex = 63;
@@ -345,7 +360,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(11, 519);
+            label2.Location = new Point(11, 556);
             label2.Name = "label2";
             label2.Size = new Size(217, 20);
             label2.TabIndex = 62;
@@ -355,7 +370,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Whole Blood", "Plasma", "Platelet" });
-            comboBox1.Location = new Point(171, 630);
+            comboBox1.Location = new Point(171, 667);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(182, 28);
             comboBox1.TabIndex = 61;
@@ -363,7 +378,7 @@
             // lblDonationType
             // 
             lblDonationType.AutoSize = true;
-            lblDonationType.Location = new Point(59, 630);
+            lblDonationType.Location = new Point(59, 667);
             lblDonationType.Name = "lblDonationType";
             lblDonationType.Size = new Size(106, 20);
             lblDonationType.TabIndex = 60;
@@ -371,7 +386,7 @@
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(114, 190);
+            dtpDOB.Location = new Point(114, 227);
             dtpDOB.Name = "dtpDOB";
             dtpDOB.Size = new Size(267, 27);
             dtpDOB.TabIndex = 59;
@@ -380,7 +395,7 @@
             // 
             lblDOB.AutoSize = true;
             lblDOB.BackColor = Color.Transparent;
-            lblDOB.Location = new Point(7, 195);
+            lblDOB.Location = new Point(9, 232);
             lblDOB.Name = "lblDOB";
             lblDOB.Size = new Size(101, 20);
             lblDOB.TabIndex = 58;
@@ -388,7 +403,7 @@
             // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(171, 465);
+            dtpDate.Location = new Point(171, 502);
             dtpDate.Name = "dtpDate";
             dtpDate.Size = new Size(267, 27);
             dtpDate.TabIndex = 57;
@@ -397,7 +412,7 @@
             // 
             lblMonth.AutoSize = true;
             lblMonth.BackColor = Color.Transparent;
-            lblMonth.Location = new Point(117, 470);
+            lblMonth.Location = new Point(117, 507);
             lblMonth.Name = "lblMonth";
             lblMonth.Size = new Size(48, 20);
             lblMonth.TabIndex = 56;
@@ -405,7 +420,7 @@
             // 
             // btnDNo
             // 
-            btnDNo.Location = new Point(386, 414);
+            btnDNo.Location = new Point(386, 451);
             btnDNo.Name = "btnDNo";
             btnDNo.Size = new Size(94, 29);
             btnDNo.TabIndex = 54;
@@ -414,7 +429,7 @@
             // 
             // btnDYes
             // 
-            btnDYes.Location = new Point(275, 414);
+            btnDYes.Location = new Point(275, 451);
             btnDYes.Name = "btnDYes";
             btnDYes.Size = new Size(94, 29);
             btnDYes.TabIndex = 53;
@@ -425,7 +440,7 @@
             // 
             lblDoYou.AutoSize = true;
             lblDoYou.BackColor = Color.Transparent;
-            lblDoYou.Location = new Point(11, 421);
+            lblDoYou.Location = new Point(11, 458);
             lblDoYou.Name = "lblDoYou";
             lblDoYou.Size = new Size(207, 20);
             lblDoYou.TabIndex = 52;
@@ -441,7 +456,7 @@
             gpDiseas.Controls.Add(checkBox3);
             gpDiseas.Controls.Add(checkBox2);
             gpDiseas.Controls.Add(checkBox1);
-            gpDiseas.Location = new Point(7, 234);
+            gpDiseas.Location = new Point(7, 271);
             gpDiseas.Name = "gpDiseas";
             gpDiseas.Size = new Size(583, 155);
             gpDiseas.TabIndex = 51;
@@ -536,16 +551,16 @@
             txtAddress.Size = new Size(324, 27);
             txtAddress.TabIndex = 50;
             // 
-            // lblAddress
+            // lblDistrict
             // 
-            lblAddress.AutoSize = true;
-            lblAddress.BackColor = Color.Transparent;
-            lblAddress.ForeColor = SystemColors.ActiveCaptionText;
-            lblAddress.Location = new Point(39, 156);
-            lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(69, 20);
-            lblAddress.TabIndex = 49;
-            lblAddress.Text = "Address :";
+            lblDistrict.AutoSize = true;
+            lblDistrict.BackColor = Color.Transparent;
+            lblDistrict.ForeColor = SystemColors.ActiveCaptionText;
+            lblDistrict.Location = new Point(47, 156);
+            lblDistrict.Name = "lblDistrict";
+            lblDistrict.Size = new Size(63, 20);
+            lblDistrict.TabIndex = 49;
+            lblDistrict.Text = "District :";
             // 
             // rbFemale
             // 
@@ -573,7 +588,7 @@
             // 
             lblGender.AutoSize = true;
             lblGender.BackColor = Color.Transparent;
-            lblGender.Location = new Point(44, 125);
+            lblGender.Location = new Point(46, 125);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(64, 20);
             lblGender.TabIndex = 46;
@@ -607,7 +622,7 @@
             // 
             lblBG.AutoSize = true;
             lblBG.BackColor = Color.Transparent;
-            lblBG.Location = new Point(7, 92);
+            lblBG.Location = new Point(9, 92);
             lblBG.Name = "lblBG";
             lblBG.Size = new Size(101, 20);
             lblBG.TabIndex = 41;
@@ -617,7 +632,7 @@
             // 
             lblNumber.AutoSize = true;
             lblNumber.BackColor = Color.Transparent;
-            lblNumber.Location = new Point(38, 59);
+            lblNumber.Location = new Point(40, 59);
             lblNumber.Name = "lblNumber";
             lblNumber.Size = new Size(70, 20);
             lblNumber.TabIndex = 39;
@@ -627,7 +642,7 @@
             // 
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
-            lblName.Location = new Point(52, 26);
+            lblName.Location = new Point(54, 26);
             lblName.Name = "lblName";
             lblName.Size = new Size(56, 20);
             lblName.TabIndex = 38;
@@ -644,6 +659,20 @@
             panel2.Size = new Size(244, 799);
             panel2.TabIndex = 1;
             // 
+            // btnSearchDonor
+            // 
+            btnSearchDonor.FlatAppearance.BorderSize = 0;
+            btnSearchDonor.FlatStyle = FlatStyle.Flat;
+            btnSearchDonor.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            btnSearchDonor.Location = new Point(49, 92);
+            btnSearchDonor.Name = "btnSearchDonor";
+            btnSearchDonor.Size = new Size(157, 29);
+            btnSearchDonor.TabIndex = 1;
+            btnSearchDonor.Text = "Search Donor";
+            btnSearchDonor.TextAlign = ContentAlignment.MiddleLeft;
+            btnSearchDonor.UseVisualStyleBackColor = true;
+            btnSearchDonor.Click += btnSearchDonor_Click;
+            // 
             // btnDonor
             // 
             btnDonor.FlatAppearance.BorderSize = 0;
@@ -657,18 +686,24 @@
             btnDonor.TextAlign = ContentAlignment.MiddleLeft;
             btnDonor.UseVisualStyleBackColor = true;
             // 
-            // btnSearchDonor
+            // textBox1
             // 
-            btnSearchDonor.FlatAppearance.BorderSize = 0;
-            btnSearchDonor.FlatStyle = FlatStyle.Flat;
-            btnSearchDonor.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            btnSearchDonor.Location = new Point(49, 92);
-            btnSearchDonor.Name = "btnSearchDonor";
-            btnSearchDonor.Size = new Size(157, 29);
-            btnSearchDonor.TabIndex = 1;
-            btnSearchDonor.Text = "Search Donor";
-            btnSearchDonor.TextAlign = ContentAlignment.MiddleLeft;
-            btnSearchDonor.UseVisualStyleBackColor = true;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(114, 186);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(324, 27);
+            textBox1.TabIndex = 68;
+            // 
+            // lblUpozilla
+            // 
+            lblUpozilla.AutoSize = true;
+            lblUpozilla.BackColor = Color.Transparent;
+            lblUpozilla.ForeColor = SystemColors.ActiveCaptionText;
+            lblUpozilla.Location = new Point(39, 189);
+            lblUpozilla.Name = "lblUpozilla";
+            lblUpozilla.Size = new Size(71, 20);
+            lblUpozilla.TabIndex = 67;
+            lblUpozilla.Text = "Upozilla :";
             // 
             // Users
             // 
@@ -719,7 +754,7 @@
         private RadioButton rbFemale;
         private RadioButton rbMale;
         private TextBox txtAddress;
-        private Label lblAddress;
+        private Label lblDistrict;
         private GroupBox gpDiseas;
         private CheckBox checkBox8;
         private CheckBox checkBox7;
@@ -753,5 +788,8 @@
         private Label label2;
         private Button btnDonor;
         private Button btnSearchDonor;
+        private Button btnBack;
+        private TextBox textBox1;
+        private Label lblUpozilla;
     }
 }
