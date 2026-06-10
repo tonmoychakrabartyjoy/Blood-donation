@@ -92,9 +92,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(1001, 154);
+            pictureBox1.Location = new Point(966, 37);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(888, 427);
+            pictureBox1.Size = new Size(924, 601);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -123,7 +123,6 @@
             label3.Size = new Size(511, 84);
             label3.TabIndex = 9;
             label3.Text = "Blood lagbe?";
-            label3.Click += this.label3_Click;
             // 
             // pictureBox2
             // 
@@ -148,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1924, 1055);
             Controls.Add(label4);
             Controls.Add(pictureBox2);

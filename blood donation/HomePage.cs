@@ -22,13 +22,16 @@ namespace blood_donation
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form2 search = new Form2();
+            search.Show();
             this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
